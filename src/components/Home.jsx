@@ -3,7 +3,8 @@ import "../App.css"
 import {useLazyQuery, gql} from "@apollo/client"
 import {BsCheckCircleFill, BsClouds} from "react-icons/bs"
 import {BiErrorCircle} from "react-icons/bi"
-import {WiThermometer} from "react-icons/wi"
+import {WiThermometer, WiWindy, WiHumidity} from "react-icons/wi"
+import {FaTemperatureHigh, FaTemperatureLow} from "react-icons/fa"
 
 const QUERY_GET_WEATHER = gql`
     query getCityByName($name: String!){
@@ -21,6 +22,13 @@ const QUERY_GET_WEATHER = gql`
                     feelsLike
                     min
                     max
+                }
+                clouds{
+                    humidity
+                }
+
+                wind{
+                    speed
                 }
             }
         }
@@ -113,13 +121,24 @@ function Home(){
                                     <h3><a><BsClouds/></a>{data.getCityByName.weather.summary.title}</h3>
                                     <h3><a><WiThermometer/></a>Feels like: { Math.round(data.getCityByName.weather.temperature.feelsLike - 273.15) }°</h3>
                                 </div>
+                                <div className="wind">
+                                    <h3><a><WiWindy/></a> Wind</h3>
+                                    <h3>{data.getCityByName.weather.wind.speed} km/h</h3>
+                                </div>
+                                <div className="humidity">
+                                    <h3><a><WiHumidity/></a> Humidity</h3>
+                                    <h3>{data.getCityByName.weather.clouds.humidity} %</h3>
+                                </div>
+                                <div className="temp-max-min">
+                                    <a><FaTemperatureHigh/></a>
+                                    <h3> Max temperature: { Math.round(data.getCityByName.weather.temperature.max - 273.15) }° </h3>
+                                    <a><FaTemperatureLow/></a>
+                                    <h3> Min temperature: { Math.round(data.getCityByName.weather.temperature.min - 273.15) }°</h3>
+                                </div>
                                 
-                                <h3>Max temperature: { Math.round(data.getCityByName.weather.temperature.max - 273.15) }°</h3>
-                                <h3>Min temperature: { Math.round(data.getCityByName.weather.temperature.min - 273.15) }°</h3>
 
                             </div>
-                            <div className="informacoes-tempo">
-                                <h3>Weather condition: </h3>
+                            <div className="informacoes-temp">
                                 <h3>{data.getCityByName.weather.summary.description}</h3>
                             </div>
                             
