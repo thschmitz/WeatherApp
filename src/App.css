@@ -100,6 +100,7 @@ span{
   margin-top: 100px;  
   border-radius: 10px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 
 .resultado-titulo h2{
@@ -159,4 +160,23 @@ span{
   color:rgb(129, 126, 126);
   font-size: 0.9rem;
   display:flex;
+}
+
+@media screen and (max-width: 1430px) {
+  .resultado-titulo{
+    max-width: 50%;
+  }
+
+  .input-titulo{
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .resultado-titulo{
+    max-width: 80%;
+  }
+  .input-titulo{
+    font-size: 1.5rem;
+  }
 }

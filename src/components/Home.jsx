@@ -88,7 +88,7 @@ function Home(){
                 </div>
                 <div className="input-campo">
                     <div className="input-campo-cidade">
-                        <input className="cidade-input"type="text" onChange={(event) => {setCity(event.target.value)}} />
+                        <input placeholder="Type your city" className="cidade-input"type="text" onChange={(event) => {setCity(event.target.value)}} />
                     <div id="sucesso" className="iconeSucesso">
                         <a><BsCheckCircleFill/></a>
                     </div>
