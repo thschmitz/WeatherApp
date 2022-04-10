@@ -11,7 +11,6 @@ function App() {
     uri: "https://graphql-weather-api.herokuapp.com/"
   })
 
-
   return (
     <ApolloProvider client={client}>
       <div className="App">

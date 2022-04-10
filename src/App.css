@@ -2,4 +2,118 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+.input{
+  text-align: center;
+  margin-top: 8rem;
+}
+
+span{
+  color:cornflowerblue;
+  text-decoration: underline;
+
+}
+
+.input-titulo{
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 4rem;
+}
+
+.input-campo input{
+  width: 50%;
+  height: 3rem;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+.input-campo{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-campo input:focus{
+  outline: none;
+}
+
+.input-campo button{
+  width: 50%;
+  height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #ccc;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.input-campo button:hover{
+  color: #fff;
+  background: cornflowerblue;
+  transition: 0.4s;
+}
+
+.iconeSucesso a{
+  color: green
+}
+
+.cidade-input{
+  margin-right: 20px;
+}
+
+.input-campo-cidade{
+  display: flex;
+  align-items: center;
+  width: 90vw;
+  justify-content: center;
+}
+
+.iconeSucesso{
+  display:none;
+}
+
+.iconeErro{
+  display:none;
+}
+
+.resultado-titulo{
+  background-color: #ccc;
+  max-width: 20%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem;
+  font-weight: bold;
+  margin-top: 100px;  
+  border-radius: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.resultado-titulo h2{
+  font-size: 1.5rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.informacoes-gerais-temp{
+  margin-bottom: 30px;
+}
+
+.informacoes-local h2{
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.abaixo-temperatura{
+  display:flex;
+  justify-content: space-around;
+}
+
+.abaixo-temperatura a{
+  margin-right: 10px;
 }
