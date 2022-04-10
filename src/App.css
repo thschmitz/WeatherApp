@@ -179,4 +179,12 @@ span{
   .input-titulo{
     font-size: 1.5rem;
   }
+
+  .input-campo-cidade{
+    width: 100vw;
+  }
+
+  .input-campo input{
+    width: 85%;
+  }
 }
