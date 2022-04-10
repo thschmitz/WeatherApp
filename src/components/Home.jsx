@@ -105,7 +105,8 @@ function Home(){
             <div className="resultado">
                 {
                     weatherSearch &&
-                    loading ? <h1>Loading...</h1>
+                    loading ? <div className="loading">
+                        <h1>Loading...</h1></div>
                     :
                     weatherSearch && data && !nullData?
                         <div className="resultado-titulo">
